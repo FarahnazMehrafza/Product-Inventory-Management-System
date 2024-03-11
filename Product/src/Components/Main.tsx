@@ -1,16 +1,16 @@
 import React from "react";
-import ReactDOM from "reactDom";
-import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Pages
+// Import AddProduct component
+import AddProduct  from "../pages/AddProduct";
+import ProductCardProps from "./ProductCard";
 import Home from "../pages/Home";
-import EditProducts from "../pages/EditProduct";
-import Favorites from "../pages/Favorites"
-import NotFound from "../pages/NotFound";
-import { Layout } from "./Layout"
+import Favorites from "../pages/Favorites";
+import NotFound from "../Components/NotFound";
+import { Layout } from "./Layout";
+
 
 const router = createBrowserRouter([
   {
@@ -23,27 +23,23 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/users",
+        path: "../pages/Favorites",
         element: <Favorites />,
       },
-      // {
-      //   path: "/users/:id",
-      //   element: <UserDetail />,
-      // },
       {
-        path: "/AddProduct",
-        element: <AddProduct />,
+        path: "../pages/AddProduct", 
+        element: <AddProduct
+         image="productImageURL"
+         name={"Product.Name"}
+         description={"Product.Description"} 
+         price={"2"}
+         rating={4.5}
+     />,
+
       },
-      // {
-      //   path: "/account",
-      //   element,
-      // },
     ],
   },
-  {
-    path: "/login",
-    element: <div>Login</div>,
-  },
+  
   {
     path: "/signup",
     element: <div>Sign Up</div>,
