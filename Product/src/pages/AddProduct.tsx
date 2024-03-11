@@ -7,9 +7,8 @@ export type ProductCardProps = {
     description: string;
     price: string;
     rating: number;
-    hero: string;
   };
-  
+
 const AddProduct: React.FC< ProductCardProps> = ({ image, name, description, price, rating }) => {
   // Component logic
   return <div>AddProduct Component</div>;

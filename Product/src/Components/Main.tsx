@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "../pages/AddProduct", 
-        element: <AddProduct
+         element: <AddProduct
          image="productImageURL"
          name={"Product.Name"}
          description={"Product.Description"} 

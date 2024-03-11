@@ -12,7 +12,6 @@ interface ProductCardProps {
   description: string;
   price: string;
   rating: number;
-  hero: string;
 }
 export default function ProductCard({
   image,
@@ -20,7 +19,6 @@ export default function ProductCard({
   description,
   price,
   rating,
-  hero,
 }: 
 ProductCardProps) {
   return (
